@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informació Alumnes</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+
+    {% include 'head/header.html' %}
+
+    <div>
+        <h1>INFORMACIÓ ALUMNAT TIC BARCELONA</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Cognoms</th>
+                    <th>Correu</th>
+                    <th>Curs</th>
+                    <th>Mòduls Matriculats</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for alumne in alumnes %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ alumne.nom }}</td>
+                    <td>{{ alumne.cognom1 }} {{ alumne.cognom2 }}</td>
+                    <td>{{ alumne.correu }}</td>
+                    <td>{{ alumne.curs }}</td>
+                    <td>{{ alumne.moduls }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

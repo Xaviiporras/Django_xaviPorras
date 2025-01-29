@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informació Professorat</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+
+    {% include 'head/header.html' %}
+
+    <div class="container">
+        <h1>INFORMACIÓ PROFESSORAT TIC BARCELONA</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Cognoms</th>
+                    <th>Edat</th>
+                    <th>Rol</th>
+                    <th>Cursos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for profe in profes %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ profe.nom }}</td>
+                    <td>{{ profe.cognom1 }} {{ profe.cognom2 }}</td>
+                    <td>{{ profe.edat }}</td>
+                    <td>{{ profe.rol }}</td>
+                    <td>{{ profe.cursos }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
