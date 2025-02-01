@@ -18,10 +18,8 @@
                 <tr>
                     <th>ID</th>
                     <th>Nom</th>
-                    <th>Cognoms</th>
-                    <th>Edat</th>
                     <th>Rol</th>
-                    <th>Cursos</th>
+                    <th>+INFO</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,10 +27,8 @@
                 <tr>
                     <td>{{ forloop.counter }}</td>
                     <td>{{ profe.nom }}</td>
-                    <td>{{ profe.cognom1 }} {{ profe.cognom2 }}</td>
-                    <td>{{ profe.edat }}</td>
-                    <td>{{ profe.rol }}</td>
-                    <td>{{ profe.cursos }}</td>
+                    <td>teacher</td>
+                    <td><a href="{% url 'teacher_detail' forloop.counter %}">+ INFO</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

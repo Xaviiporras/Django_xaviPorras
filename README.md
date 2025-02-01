@@ -13,5 +13,6 @@ View and Urls:
 ![Views_Urls](imatges/Views_urls.png)
 
 ## Exercici 2
-
+Video:
+https://drive.google.com/file/d/16aDhIDJ-vvK6dFH_1DoiP8KuL7XYpQsv/view?usp=sharing
 ## Exercici 3
