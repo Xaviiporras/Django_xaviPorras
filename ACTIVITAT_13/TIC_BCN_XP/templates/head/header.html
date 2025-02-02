@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">  
+  </head>
+  <body>
+    <h1>Projecte Django</h1>
+    <nav>
+      <div>
+          <a href="{% url 'students' %}">Alumnes</a>
+          <a href="{% url 'teachers' %}">Professors</a>
+      </div>
+  </nav>
+  </body>
+</html>

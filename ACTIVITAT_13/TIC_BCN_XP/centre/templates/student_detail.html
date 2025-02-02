@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalls Alumne</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+</head>
+<body>
+
+    {% include 'head/header.html' %}
+
+    <div class="container">
+        <h1>Detalls de {{ alumne.nom }}</h1>
+        <p><strong>Cognoms:</strong> {{ alumne.cognom1 }} {{ alumne.cognom2 }}</p>
+        <p><strong>Correu:</strong> {{ alumne.correu }}</p>
+        <p><strong>Curs:</strong> {{ alumne.curs }}</p>
+        <p><strong>Mòduls Matriculats:</strong> {{ alumne.moduls }}</p>
+
+        <a href="{% url 'students' %}" class="btn">← Tornar</a>
+    </div>
+
+</body>
+</html>
