@@ -11,6 +11,9 @@ Templates:
 Conectar amb la nova aplicació:
 ![Conectar amb la nova aplicació](../../../imatges/conectarConLogin.png)
 
+Afegir Urls nova aplicació:
+![Afegir Urls nova aplicació](../../../imatges/afegirUrlLogin.png)
+
 ## Crear la aplicació
 
 Ordre per crear la aplicació:
