@@ -18,3 +18,11 @@ Afegir Urls nova aplicació:
 
 Ordre per crear la aplicació:
 ![Ordre aplicació](../../../imatges/crear_app.png)
+
+## Crear model de l'aplicació
+
+Ordenes Migrations
+![Ordres migrations](../../../imatges/ordenes_migrations.png)
+
+Taula login_usuario Postgre
+![Tabla Postgre](../../../imatges/pgadminTabla.png)
