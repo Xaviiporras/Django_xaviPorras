@@ -5,7 +5,8 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>Home</h1>
-    <a href="{% url 'login' %}">Ir a Login</a>
+    <h1>Bienvenido, {{ user.first_name }}</h1>
+    <p>Has iniciado sesión correctamente.</p>
+    <a href="{% url 'logout' %}"><button>Logout</button></a>
 </body>
 </html>

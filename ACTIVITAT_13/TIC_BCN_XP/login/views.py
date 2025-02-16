@@ -8,9 +8,10 @@ def index(request):
     return render(request, 'index.html')
 
 def home_view(request):
-    # Verificar si el usuario tiene sesión activa
     if 'user_id' in request.session:
-        return render(request, 'home.html')
+        user_id = request.session.get('user_id')
+        user = Usuario.objects.get(id=user_id)
+        return render(request, 'home.html', {'user': user})
     else:
         return redirect('login')
 
@@ -30,3 +31,7 @@ def login_view(request):
             messages.error(request, 'Usuario no encontrado')
 
     return render(request, 'login.html')
+
+def logout_view(request):
+    request.session.flush()
+    return redirect('login')
