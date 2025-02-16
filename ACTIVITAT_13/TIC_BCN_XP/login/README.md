@@ -26,3 +26,9 @@ Ordenes Migrations
 
 Taula login_usuario Postgre
 ![Tabla Postgre](../../../imatges/pgadminTabla.png)
+
+
+## Documentació funcionalitats:
+
+Enllaç video:
+https://drive.google.com/file/d/1z4-mQP8Xy7GxoINcwDPXzRn8M467oXLI/view?usp=sharing
