@@ -3,15 +3,16 @@ from django.http import HttpResponse
 from django.template import loader
 from django.contrib import messages
 from login.models import Usuario
-from django.contrib.auth.hashers import check_password
-from django.contrib.auth import authenticate
-
 
 def index(request):
     return render(request, 'index.html')
 
 def home_view(request):
-    return render(request, 'home.html')
+    # Verificar si el usuario tiene sesión activa
+    if 'user_id' in request.session:
+        return render(request, 'home.html')
+    else:
+        return redirect('login')
 
 def login_view(request):
     if request.method == 'POST':
@@ -21,10 +22,11 @@ def login_view(request):
         try:
             user = Usuario.objects.get(email=email)
             if password == user.password:
-                return redirect('home')
+                request.session['user_id'] = user.id 
+                return redirect('home') 
             else:
                 messages.error(request, 'Credenciales inválidas')
         except Usuario.DoesNotExist:
             messages.error(request, 'Usuario no encontrado')
-    
+
     return render(request, 'login.html')
